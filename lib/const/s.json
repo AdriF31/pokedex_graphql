@@ -1,0 +1,18 @@
+{
+    "status": true,
+    "message": "List Donation",
+    "data": [
+        {
+            "id": 17,
+            "title": "Maiores sed id consequuntur velit est expedita iure molestiae.",
+            "description": "Ipsum nisi repellat sint cumque perspiciatis porro distinctio. Qui blanditiis quaerat modi dolorem nostrum voluptatem repellendus. Quo quis magni quaerat voluptate quas.",
+            "total_budget": 2825904,
+            "image": "http://127.0.0.1:8000/storage/img/default.jpg",
+            "location": "kontoljaran",
+            "category": "Bencana Alam",
+            "created_at": "03-11-2022",
+            "total_collected": 1370000
+        }
+     
+    ]
+}
