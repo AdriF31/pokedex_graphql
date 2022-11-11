@@ -5,8 +5,16 @@ import 'package:pokedex/base/base_controller.dart';
 import 'package:pokedex/data/model/pokemon_detail_model.dart';
 import 'package:pokedex/data/repository/repository.dart';
 
+enum DetailViewState {
+  loading,
+  none,
+}
+
 class DetailController extends BaseController {
+  DetailViewState _state = DetailViewState.none;
+  DetailViewState get state => _state;
   var isFavorite = false.obs;
+
   NumberFormat formatter = NumberFormat("#000");
   PokemonDetailModel? pokemonDetail = PokemonDetailModel();
   List<String?> pokemonDescription = [];
@@ -17,16 +25,23 @@ class DetailController extends BaseController {
   @override
   void onInit() async {
     super.onInit();
-    _getPokemonDetail(argumentData['id']);
+    _getPokemonDetail(argumentData);
 
     update();
   }
 
+  chanrState(DetailViewState s) {
+    _state = s;
+    update();
+  }
+
   Future _getPokemonDetail(int id) async {
+    chanrState(DetailViewState.loading);
     try {
       var res = await repository.getPokemonDetail(id);
 
       pokemonDetail = res;
+      chanrState(DetailViewState.none);
 
       // for (int index = 0;
       //     index <=

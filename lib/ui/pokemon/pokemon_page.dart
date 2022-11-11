@@ -100,7 +100,7 @@ class PokemonPage extends StatelessWidget {
                             itemBuilder: (context, item, index) =>
                                 GestureDetector(
                                   onTap: () => Get.to(() => const DetailPage(),
-                                      arguments: {"id": item.id}),
+                                      arguments: item.id),
                                   child: Container(
                                     decoration: BoxDecoration(
                                         color: Colors.white,
