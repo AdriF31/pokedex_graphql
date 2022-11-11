@@ -1,12 +1,13 @@
 # Pokedex
-Aplikasi untuk menampilkan daftar pokemon yang didapat dari https://pokeapi.co/docs/v2
+Aplikasi untuk menampilkan daftar pokemon yang didapat dari[(https://beta.pokeapi.co/graphql/v1beta)](https://beta.pokeapi.co/graphql/v1beta)
 
 ## Feature
 * GetX
-* Dio
 * MVC
 * Lottie Animation
 * Infinite Scroll Pagination
+* graphql
+* hasura connect
 
 ## Demo Aplikasi
 Berikut merupakan demo dari aplikasi pokedex
